@@ -1,0 +1,115 @@
+* {
+  font-family: `Oswald`, sans-serif;
+}
+#parent{
+    width: 350px;
+	height: 350px;
+	border: 3px solid black;
+	margin: 0 auto;
+	position: relative;
+	font-family: sans-serif;
+	overflow: hidden;
+	padding-bottom: 50px;
+	background-color: rgba(0, 0, 0, .7);
+}
+#slide{
+	width: 500%;
+	height: 350px;
+	transition: all ease 1s;
+}
+#slide::after{
+		content: '';
+		display: block;
+		height: 0px;
+		clear: both;
+	}
+
+.slide-single{
+	width: 20%;
+	height: 350px;
+	float: left;
+}
+
+h1{
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 36px;
+	margin: 60px auto 40px auto;
+}
+.left{
+	width: 45px;
+	height: 45px;
+	position: absolute;
+	left: 0px;
+	top: 150px;
+	background: url(images/arrow2.png);
+	-webkit-background-size: contain;
+	background-size: contain;
+	z-index: 1;
+	cursor: pointer;
+	transform: rotateY(180deg);
+	opacity: 0.5;
+	transition: 0.4s;
+}
+.right{
+	width: 45px;
+	height: 45px;
+	position: absolute;
+	right: 0px;
+	top: 150px;
+	background: url(images/arrow2.png);
+	-webkit-background-size: contain;
+	background-size: contain;
+	z-index: 1;
+	cursor: pointer;
+	opacity: 0.4;
+	transition: 0.4s;
+}
+.left:hover,
+.right:hover{
+  opacity: 1;
+  transition: 0.4s;
+}
+.buttons{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: absolute;
+	bottom: 15px;
+	width: 250px;
+	height: 50px;
+	left: 50px;
+}
+.buttons .btns{
+	width: 45px;
+	height: 10px;
+	border-radius: 30px;
+	transition: 0.5s;
+}
+.buttons .btns:hover{
+	box-shadow: 0 0 7px 2px #227EEF;
+}
+.non_active{
+    background-color: #CFCDCD;
+}
+.active{
+	background-color: #69C1F3 !important;
+}
+.b-preview__slideshowBtn{
+	width: 50px;
+	height: 30px;
+	border-radius: 5px;
+	background-color: #73CDF7;
+	position: absolute;
+	bottom: 0px;
+	left: 150px;
+	font-size: 16px;
+	color: #5B5A5A;
+	transition: 0.3s;
+}
+.b-preview__slideshowBtn:hover{
+	text-shadow: 0px 0px 0px #000;
+	color: #000;
+	cursor: pointer;
+	transition: 0.3s;
+}
